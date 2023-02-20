@@ -37,11 +37,30 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </head> 
 
 <script>
+	var stye_count = 0;
+        var pinkeye_count = 0;
 
-	//YOUR JAVASCRIPT GOES HERE
+	
+        function allergyAdd(){
+            stye_count = stye_count + 1;
+		alert(stye_count);
+        }
+
+        function coldAdd(){
+            pinkeye_count = pinkeye_count + 1;
+		alert(pinkeye_count);
+	}
+	
+	function getResults(){
+ 		var styePercent = (stye_count/4) * 100;
+		var pinkeyePercent = (pinkeye_count/4) * 100;
+		var resultText = document.getElementById("Results");
+		resultText.innerHTML = "Probability it is a stye =" + styePercent + "<br> Probability it is pink eye =" + pinkeyePercent;
+	}
+
 
 </script>	
-
+<!-- copied and pasted java script from app 3 to here, changing all allergy to stye and all cold to pink eye-->
 
 <!-- THIS STYLE CODE HELPS MAKE YOUR APP LOOK GOOD. PROBABLY DONT MESS WITH IT -->
 <style>	
